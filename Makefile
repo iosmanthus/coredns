@@ -33,3 +33,7 @@ pb:
 clean:
 	go clean
 	rm -f coredns
+docker: coredns
+	docker build . -t v2router
+run: coredns
+	./coredns
